@@ -1,6 +1,2 @@
-﻿  stdafx.cpp
-  Game.cpp
-  20180208SerialSDL.cpp
-  Generating Code...
-     Creating library C:\Users\Developer\Documents\AlcwynParker\2018\comp140_3_sdl_serial\Debug\20180208SerialSDL.lib and object C:\Users\Developer\Documents\AlcwynParker\2018\comp140_3_sdl_serial\Debug\20180208SerialSDL.exp
-  20180208SerialSDL.vcxproj -> C:\Users\Developer\Documents\AlcwynParker\2018\comp140_3_sdl_serial\Debug\20180208SerialSDL.exe
+﻿     Creating library C:\Users\Developer\Documents\AlcwynParker\comp140_3_sdl_serial\Debug\20180208SerialSDL.lib and object C:\Users\Developer\Documents\AlcwynParker\comp140_3_sdl_serial\Debug\20180208SerialSDL.exp
+  20180208SerialSDL.vcxproj -> C:\Users\Developer\Documents\AlcwynParker\comp140_3_sdl_serial\Debug\20180208SerialSDL.exe
