@@ -73,7 +73,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>libraries\SDL2-2.0.7\include;libraries\serial\include;$(IncludePath)</IncludePath>
-    <LibraryPath>libraries\SDL2-2.0.7\lib\x86;C:\Users\Developer\Documents\AlcwynParker\2018\comp140_3_sdl_serial\libraries\serial\visual_studio\Debug;$(LibraryPath)</LibraryPath>
+    <LibraryPath>libraries\SDL2-2.0.7\lib\x86;libraries\serial\visual_studio\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
