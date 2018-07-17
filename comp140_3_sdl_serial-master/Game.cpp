@@ -1,8 +1,12 @@
 #include "stdafx.h"
 #include "Game.h"
 #include <iostream>
+#include "TextureManager.h"
+#include "GameObject.h"
 
 using std::cout;
+
+GameObject* player;
 
 /*
 * Constructor - not used in this case
@@ -65,6 +69,8 @@ bool Game::init(const char * title, int xpos, int ypos, int width, int height, i
 	cout << "SDL init success \n";
 
 	return true;
+
+
 }
 
 void Game::render()
@@ -72,10 +78,13 @@ void Game::render()
 	// set background color
 	SDL_SetRenderDrawColor(mainRenderer, 255, 255, 255, 255);
 	
+	player = new GameObject("assets/car.png", mainRenderer, 0, 0);
+		
 	// clear previous frame
 	SDL_RenderClear(mainRenderer);
 
 	// draw to the screen here!
+	player->Render();
 	
 	// render new frame
 	SDL_RenderPresent(mainRenderer);
@@ -87,7 +96,7 @@ void Game::render()
 */
 void Game::update()
 {
-	
+	player->Update();
 }
 
 /*

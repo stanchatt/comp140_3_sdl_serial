@@ -1,6 +1,6 @@
 #pragma once
 #include "SDL.h"
-
+#include "SDL_image.h"
 
 class Game
 {
@@ -17,6 +17,7 @@ public:
 	bool running() { return isRunning; };
 
 private:
+	
 	SDL_Window* mainWindow;
 	SDL_Renderer* mainRenderer;
 
