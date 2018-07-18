@@ -85,12 +85,22 @@ void Game::render()
 	// set background color
 	SDL_SetRenderDrawColor(mainRenderer, 255, 255, 255, 255);
 	
-	
 		
 	// clear previous frame
 	SDL_RenderClear(mainRenderer);
 
 	// draw to the screen here!
+	SDL_Surface* surface = IMG_Load("assets/lanes.png");
+	SDL_Texture* texture = SDL_CreateTextureFromSurface(mainRenderer, surface);
+	SDL_FreeSurface(surface);
+
+	SDL_Rect destination;
+	destination.x = 0;
+	destination.y = 0;
+	destination.w = 680;
+	destination.h = 480;
+
+	SDL_RenderCopy(mainRenderer, texture, NULL, &destination);
 
 	lanes->Render();
 	player->Render();
