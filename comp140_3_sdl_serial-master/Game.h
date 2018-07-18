@@ -2,6 +2,9 @@
 #include "SDL.h"
 #include "SDL_image.h"
 
+//forward decleration of Game Object - BMD
+class GameObject;
+
 class Game
 {
 public:
@@ -22,5 +25,13 @@ private:
 	SDL_Renderer* mainRenderer;
 
 	bool isRunning;
+	//lanes pointer
+	GameObject* lanes;
+
+	//Player Pointer -BMD
+	GameObject* player;
+
+	//box pointer
+	GameObject* box;
 };
 

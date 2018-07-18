@@ -1,6 +1,7 @@
+#include "stdafx.h"
 #include "GameObject.h"
 #include "TextureManager.h"
-#include "stdafx.h"
+
 
 GameObject::GameObject(const char* texturesheet, SDL_Renderer* mainRenderer, int x, int y)
 {
@@ -12,11 +13,14 @@ GameObject::GameObject(const char* texturesheet, SDL_Renderer* mainRenderer, int
 
 }
 
+GameObject::~GameObject()
+{
+	//Not surte if you are deleting Object texture in the Texture Manager- BMD
+}
+
 
 void GameObject::Update()
 {
-	xpos++;
-	ypos++;
 
 	srcRect.h = 32;
 	srcRect.w = 32;

@@ -102,7 +102,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\SDL2_image-2.0.1\lib\x86;C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\comp140_3_sdl_serial-master\libraries\SDL2-2.0.7\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\SDL2_image-2.0.1\include;C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\SDL2_image-2.0.1\lib\x86;C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\comp140_3_sdl_serial-master\libraries\SDL2-2.0.7\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -118,7 +118,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\SDL2_image-2.0.1\lib\x86;C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\comp140_3_sdl_serial-master\libraries\SDL2-2.0.7\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\SDL2_image-2.0.1\include;C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\SDL2_image-2.0.1\lib\x86;C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\comp140_3_sdl_serial-master\libraries\SDL2-2.0.7\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
