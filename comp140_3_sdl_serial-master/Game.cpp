@@ -69,7 +69,7 @@ bool Game::init(const char * title, int xpos, int ypos, int width, int height, i
 	cout << "SDL init success \n";
 
 	//spawn lanes
-	lanes = new GameObject("assets/lanes.png", mainRenderer, 0, 0);
+	lanes = new GameObject("assets/lanes.png", mainRenderer, -1, 0);
 
 	//initialise Game Object - BMD
 	player = new GameObject("assets/car.png", mainRenderer, 0, 0);

@@ -23,7 +23,7 @@
     <ProjectGuid>{944484A5-C353-484C-8E4A-C64DEA93D976}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>My20180208SerialSDL</RootNamespace>
-    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.10240.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -77,8 +77,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\SDL2_image-2.0.1\include;C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\comp140_3_sdl_serial-master\libraries\SDL2-2.0.7\include;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\SDL2_image-2.0.1\lib\x86;C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\comp140_3_sdl_serial-master\libraries\SDL2-2.0.7\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\comp140_3_sdl_serial\SDL2_image-2.0.1\include;C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\SDL2_image-2.0.1\include;C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\comp140_3_sdl_serial-master\libraries\SDL2-2.0.7\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\comp140_3_sdl_serial\SDL2_image-2.0.1\lib\x86;C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\SDL2_image-2.0.1\lib\x86;C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\comp140_3_sdl_serial-master\libraries\SDL2-2.0.7\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -96,13 +96,13 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\SDL2_image-2.0.1\include;C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\comp140_3_sdl_serial-master\libraries\SDL2-2.0.7\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\SDL2_image-2.0.1\include;libraries\SDL2-2.0.7\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib</AdditionalDependencies>
-      <AdditionalLibraryDirectories>C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\SDL2_image-2.0.1\include;C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\SDL2_image-2.0.1\lib\x86;C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\comp140_3_sdl_serial-master\libraries\SDL2-2.0.7\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\SDL2_image-2.0.1\lib\x86;libraries\SDL2-2.0.7\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -113,12 +113,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\SDL2_image-2.0.1\include;C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\comp140_3_sdl_serial-master\libraries\SDL2-2.0.7\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\SDL2_image-2.0.1\include;libraries\SDL2-2.0.7\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\SDL2_image-2.0.1\include;C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\SDL2_image-2.0.1\lib\x86;C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\comp140_3_sdl_serial-master\libraries\SDL2-2.0.7\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\SDL2_image-2.0.1\lib\x86;D:\comp140_3_sdl_serial\comp140_3_sdl_serial-master\libraries\SDL2-2.0.7\lib\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
