@@ -9,6 +9,7 @@ public:
 	~GameObject();
 
 	void Update();
+	void UpdateBox();
 	void Render();
 	int xpos = 0;
 	int ypos = 0;

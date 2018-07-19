@@ -21,6 +21,8 @@ GameObject::~GameObject()
 
 void GameObject::Update()
 {
+	xpos++;
+	ypos++;
 
 	srcRect.h = 32;
 	srcRect.w = 32;
@@ -29,6 +31,20 @@ void GameObject::Update()
 
 	destRect.x = xpos;
 	destRect.y = ypos;
+	destRect.w = srcRect.w * 2;
+	destRect.h = srcRect.h * 2;
+}
+
+void GameObject::UpdateBox()
+{
+
+	srcRect.h = 32;
+	srcRect.w = 32;
+	srcRect.x = 0;
+	srcRect.y = 0;
+
+	destRect.x = 550;
+	destRect.y = 50;
 	destRect.w = srcRect.w * 2;
 	destRect.h = srcRect.h * 2;
 }

@@ -75,7 +75,7 @@ bool Game::init(const char * title, int xpos, int ypos, int width, int height, i
 	player = new GameObject("assets/car.png", mainRenderer, 0, 0);
 	
 	//spawn box
-	box = new GameObject("assets/box.png", mainRenderer, 50, 50);
+	box = new GameObject("assets/box.png", mainRenderer, 0, 0);
 
 	return true;
 }
@@ -118,7 +118,7 @@ void Game::update()
 {
 	lanes->Update();
 	player->Update();
-	box->Update();
+	box->UpdateBox();
 
 }
 
