@@ -75,7 +75,9 @@ bool Game::init(const char * title, int xpos, int ypos, int width, int height, i
 	player = new GameObject("assets/car.png", mainRenderer, 0, 0);
 	
 	//spawn box
-	box = new GameObject("assets/box.png", mainRenderer, 0, 0);
+	boxtop = new GameObject("assets/box.png", mainRenderer, 0, 0);
+	boxmid = new GameObject("assets/box.png", mainRenderer, 0, 0);
+	boxbot = new GameObject("assets/box.png", mainRenderer, 0, 0);
 
 	return true;
 }
@@ -104,7 +106,9 @@ void Game::render()
 
 	lanes->Render();
 	player->Render();
-	box->Render();
+	boxtop->Render();
+	boxmid->Render();
+	boxbot->Render();
 
 	// render new frame
 	SDL_RenderPresent(mainRenderer);
@@ -116,9 +120,11 @@ void Game::render()
 */
 void Game::update()
 {
-	lanes->Update();
-	player->Update();
-	box->UpdateBox();
+	
+	player->UpdatePlayer();
+	boxtop->UpdateBox();
+	boxmid->UpdateBox();
+	boxbot->UpdateBox();
 
 }
 

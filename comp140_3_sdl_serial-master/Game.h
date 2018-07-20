@@ -32,6 +32,8 @@ private:
 	GameObject* player;
 
 	//box pointer
-	GameObject* box;
+	GameObject* boxtop;
+	GameObject* boxmid;
+	GameObject* boxbot;
 };
 

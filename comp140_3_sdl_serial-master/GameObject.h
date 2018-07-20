@@ -8,12 +8,16 @@ public:
 	GameObject(const char* texturesheet, SDL_Renderer* ren, int x, int y);
 	~GameObject();
 
-	void Update();
+	void UpdatePlayer();
 	void UpdateBox();
 	void Render();
 	int xpos = 0;
 	int ypos = 0;
-
+	int BoxXpos = 550;
+	int BoxTopLane = 50;
+	int BoxMidLane = 150;
+	int BoxBotLane = 250;
+	int RandomLane;
 private:
 
 	
