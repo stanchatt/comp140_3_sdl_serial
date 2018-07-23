@@ -1,6 +1,7 @@
 #pragma once
 #include "SDL.h"
 #include "SDL_image.h"
+#include <vector>
 
 //forward decleration of Game Object - BMD
 class GameObject;
@@ -35,5 +36,11 @@ private:
 	GameObject* boxtop;
 	GameObject* boxmid;
 	GameObject* boxbot;
+
+	Uint32 StartTime;
+	Uint32 CurrentTime;
+	Uint32 Time;
+
+	std::vector<GameObject*> Boxes;
 };
 

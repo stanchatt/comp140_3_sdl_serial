@@ -3,7 +3,7 @@
 #include <iostream>
 #include "TextureManager.h"
 #include "GameObject.h"
-
+#include <time.h>
 using std::cout;
 
 
@@ -70,14 +70,34 @@ bool Game::init(const char * title, int xpos, int ypos, int width, int height, i
 
 	//spawn lanes
 	lanes = new GameObject("assets/lanes.png", mainRenderer, -1, 0);
+	lanes->IsActive = true;
 
 	//initialise Game Object - BMD
 	player = new GameObject("assets/car.png", mainRenderer, 0, 0);
+	player->IsActive = true;
 	
 	//spawn box
-	boxtop = new GameObject("assets/box.png", mainRenderer, 0, 0);
+	/*boxtop = new GameObject("assets/box.png", mainRenderer, 0, 0);
 	boxmid = new GameObject("assets/box.png", mainRenderer, 0, 0);
 	boxbot = new GameObject("assets/box.png", mainRenderer, 0, 0);
+	*/
+
+	for (int i = 0; i < 10; i++)
+	{
+		GameObject* box = new GameObject("assets/box.png", mainRenderer, -10, -10);
+		Boxes.push_back(box);
+	}
+
+	srand(time(NULL));
+
+	//boxbot->RandomSpawn();
+
+	Boxes[0]->RandomSpawn();
+	Boxes[1]->RandomSpawn();
+	Boxes[2]->RandomSpawn();
+	StartTime = SDL_GetTicks();
+
+	
 
 	return true;
 }
@@ -106,9 +126,14 @@ void Game::render()
 
 	lanes->Render();
 	player->Render();
-	boxtop->Render();
-	boxmid->Render();
-	boxbot->Render();
+	//boxtop->Render();
+	//boxmid->Render();
+	//boxbot->Render();
+
+	for (GameObject* box : Boxes)
+	{
+		box->Render();
+	}
 
 	// render new frame
 	SDL_RenderPresent(mainRenderer);
@@ -120,12 +145,39 @@ void Game::render()
 */
 void Game::update()
 {
-	
-	player->UpdatePlayer();
-	boxtop->UpdateBox();
-	boxmid->UpdateBox();
-	boxbot->UpdateBox();
+	CurrentTime = SDL_GetTicks();
+	Time = (CurrentTime - StartTime) / 1000 ;
 
+	cout << Time << std::endl;
+
+	/*if ( Time%2 == 0 && Time !=0)
+	{
+		int indexOfFirstInactive = -1;
+		int index = 0;
+		while (indexOfFirstInactive==-1 && index<10)
+		{
+			if (Boxes[index]->IsActive == false)
+			{
+				indexOfFirstInactive = index;
+				break;
+			}
+		}
+
+		if (indexOfFirstInactive != -1) {
+			Boxes[indexOfFirstInactive]->IsActive = true;
+		}
+
+	}*/
+
+	player->UpdatePlayer();
+	//boxtop->UpdateBox();
+	//boxmid->UpdateBox();
+	//boxbot->UpdateBox();
+	
+	for (GameObject* box : Boxes)
+	{
+		box->UpdateBox();
+	}
 }
 
 /*

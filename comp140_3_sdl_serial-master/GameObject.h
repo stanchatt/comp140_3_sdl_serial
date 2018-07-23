@@ -16,8 +16,13 @@ public:
 	int BoxXpos = 550;
 	int BoxTopLane = 50;
 	int BoxMidLane = 150;
-	int BoxBotLane = 250;
+	int BoxBotLane = 350;
 	int RandomLane;
+
+	void RandomSpawn();
+
+	bool IsActive = false;
+
 private:
 
 	

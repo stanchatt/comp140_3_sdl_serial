@@ -23,8 +23,7 @@ GameObject::~GameObject()
 }
 
 void GameObject::UpdatePlayer()
-{
-	xpos++;
+{	xpos++;
 	ypos++;
 
 	srcRect.h = 32;
@@ -64,36 +63,57 @@ void GameObject::UpdateBox()
 
 void GameObject::UpdateBox()
 {
-	RandomLane = rand() % 3 + 1;
-		if (RandomLane == 1);
+	if (IsActive == true)
+	{
+		BoxXpos--; 
+		if (BoxXpos < 0) 
 		{
-			BoxTopLane;
+			IsActive = false;
+			RandomSpawn();
 		}
-		if (RandomLane == 2);
-		{
-			BoxMidLane;
-		}
-		if (RandomLane == 3);
-		{
-			BoxBotLane;
-		}
-	cout << RandomLane;
+	}
+		srcRect.h = 32;
+		srcRect.w = 32;
+		srcRect.x = 0;
+		srcRect.y = 0;
 
-	BoxXpos--;
-	srcRect.h = 32;
-	srcRect.w = 32;
-	srcRect.x = 0;
-	srcRect.y = 0;
+		destRect.x = BoxXpos;
+		destRect.y = ypos;
 
-	destRect.x = BoxXpos;
-	destRect.y = RandomLane;
-
-	destRect.w = srcRect.w * 2;
-	destRect.h = srcRect.h * 2;
+		destRect.w = srcRect.w * 2;
+		destRect.h = srcRect.h * 2;
 }
 
 void GameObject::Render()
 {
-	SDL_RenderCopy(renderer, objTexture, &srcRect, &destRect);
+	if (IsActive == true) 
+	{
+		SDL_RenderCopy(renderer, objTexture, &srcRect, &destRect);
+	}
+}
+
+void GameObject::RandomSpawn()
+{
+	IsActive = true;
+
+	RandomLane = rand() %3 +1;
+	if (RandomLane == 1)
+	{
+		//destRect.y = BoxTopLane;
+		ypos = BoxTopLane;
+	}
+	if (RandomLane == 2)
+	{
+		//destRect.y = BoxMidLane;
+		ypos = BoxMidLane;
+	}
+	if (RandomLane == 3)
+	{
+		//destRect.y = BoxBotLane;
+		ypos = BoxBotLane;
+	}
+
+	cout << RandomLane;
+	BoxXpos = 550;
 }
 
