@@ -14,7 +14,7 @@ using std::cout;
 */
 Game::Game()
 {
-	
+	SpawnTime = 0;
 }
 
 /*
@@ -93,12 +93,11 @@ bool Game::init(const char * title, int xpos, int ypos, int width, int height, i
 	//boxbot->RandomSpawn();
 
 	Boxes[0]->RandomSpawn();
-	Boxes[1]->RandomSpawn();
-	Boxes[2]->RandomSpawn();
-	StartTime = SDL_GetTicks();
-
-	
-
+	//Boxes[1]->RandomSpawn();
+	//Boxes[2]->RandomSpawn();
+	StartTime = (float)SDL_GetTicks();
+	CurrentTime = StartTime;
+	LastTime = StartTime;
 	return true;
 }
 
@@ -145,39 +144,37 @@ void Game::render()
 */
 void Game::update()
 {
+	//Grab the current ticks - BMD
 	CurrentTime = SDL_GetTicks();
-	Time = (CurrentTime - StartTime) / 1000 ;
-
-	cout << Time << std::endl;
-
-	/*if ( Time%2 == 0 && Time !=0)
-	{
-		int indexOfFirstInactive = -1;
-		int index = 0;
-		while (indexOfFirstInactive==-1 && index<10)
-		{
-			if (Boxes[index]->IsActive == false)
-			{
-				indexOfFirstInactive = index;
-				break;
-			}
-		}
-
-		if (indexOfFirstInactive != -1) {
-			Boxes[indexOfFirstInactive]->IsActive = true;
-		}
-
-	}*/
+	//Check the elapsed time - BMD
+	Time = (CurrentTime - LastTime) / 1000.0f ;
+	//Increment spawn timer - BMD
+	SpawnTime += Time;
 
 	player->UpdatePlayer();
-	//boxtop->UpdateBox();
-	//boxmid->UpdateBox();
-	//boxbot->UpdateBox();
 	
 	for (GameObject* box : Boxes)
 	{
 		box->UpdateBox();
 	}
+
+	//Spawn time - A box should spawn every 5 seconds - BMD
+	if (SpawnTime > 5.0f)
+	{
+		//Loop through and find an inactive Game Object - BMD
+		for (int i = 0; i < 10; i++)
+		{
+			if (!Boxes[i]->IsActive) {
+				//Spawn it - BMD
+				Boxes[i]->RandomSpawn();
+				break;
+			}
+		}
+		//reset the spawn timer
+		SpawnTime = 0.0f;
+	}
+	//Set the last time to current
+	LastTime = CurrentTime;
 }
 
 /*

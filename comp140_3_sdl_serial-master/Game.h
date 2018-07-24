@@ -37,10 +37,14 @@ private:
 	GameObject* boxmid;
 	GameObject* boxbot;
 
-	Uint32 StartTime;
-	Uint32 CurrentTime;
-	Uint32 Time;
+	float StartTime;
+	float CurrentTime;
+	float LastTime;
+	float Time;
+	float SpawnTime;
 
 	std::vector<GameObject*> Boxes;
+
+	bool spawned = false;
 };
 
