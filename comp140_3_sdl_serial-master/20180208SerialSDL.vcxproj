@@ -72,12 +72,12 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\SDL2_image-2.0.1\include;C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\comp140_3_sdl_serial-master\libraries\SDL2-2.0.7\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\Stan\Desktop\comp140_3_sdl_serial\comp140_3_sdl_serial-master\libraries\serial\include;C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\SDL2_image-2.0.1\include;C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\comp140_3_sdl_serial-master\libraries\SDL2-2.0.7\include;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\SDL2_image-2.0.1\lib\x86;C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\comp140_3_sdl_serial-master\libraries\SDL2-2.0.7\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>D:\comp140_3_sdl_serial\SDL2_image-2.0.1\include;C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\SDL2_image-2.0.1\include;C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\comp140_3_sdl_serial-master\libraries\SDL2-2.0.7\include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\Users\Stan\Desktop\comp140_3_sdl_serial\comp140_3_sdl_serial-master\libraries\serial\include;D:\comp140_3_sdl_serial\SDL2_image-2.0.1\include;C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\SDL2_image-2.0.1\include;C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\comp140_3_sdl_serial-master\libraries\SDL2-2.0.7\include;$(IncludePath)</IncludePath>
     <LibraryPath>D:\comp140_3_sdl_serial\SDL2_image-2.0.1\lib\x86;C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\SDL2_image-2.0.1\lib\x86;C:\Users\Stan\Desktop\comp140_3_sdl_serial-master\comp140_3_sdl_serial-master\libraries\SDL2-2.0.7\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -162,6 +162,7 @@
   <ItemGroup>
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameObject.h" />
+    <ClInclude Include="SerialInterface.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="TextureManager.h" />
@@ -170,6 +171,7 @@
     <ClCompile Include="20180208SerialSDL.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameObject.cpp" />
+    <ClCompile Include="SerialInterface.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
